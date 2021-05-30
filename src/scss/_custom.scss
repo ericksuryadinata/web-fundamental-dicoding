@@ -1,0 +1,50 @@
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,300;0,400;1,200;1,300;1,400&display=swap");
+
+body {
+  font-family: "IBM Plex Sans", sans-serif !important;
+}
+
+main {
+  margin-top: 100px;
+  .main-container{
+    opacity: 0;
+    &.show{
+      opacity: 1;
+    }
+  }
+}
+
+.css-serial {
+  counter-reset: serial-number; /* Set the serial number counter to 0 */
+  td {
+    &:first-child {
+      &:before {
+        counter-increment: serial-number; /* Increment the serial number counter */
+        content: counter(serial-number); /* Display the counter */
+      }
+    }
+  }
+}
+
+.table-responsive {
+  overflow-y: auto;
+  height: 550px;
+}
+
+.stay-in-there {
+  position: sticky;
+  top: 0;
+  background-color: #ffffff;
+}
+
+.card {
+  box-shadow: 0 8px 24px #e5e4e6;
+}
+
+card-status {
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: -15px;
+  margin-left: -15px;
+  margin-top:1.5rem !important;
+}
